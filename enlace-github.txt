@@ -1,5 +1,2 @@
 Enlace del proyecto en GitHub:
 https://github.com/angelbori123/pagina-web-basica
-
-Despues de publicar el repositorio, cambia TU-USUARIO por tu nombre de GitHub
-y copia el enlace tambien en index.html (seccion Contacto).
