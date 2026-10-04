@@ -13,4 +13,4 @@ Archivos:
 
 Se visualizo en el navegador y se subio el proyecto a GitHub.
 Enlace de GitHub: https://github.com/angelbori123/pagina-web-basica
-(Reemplazar TU-USUARIO por el nombre de la cuenta.)
+
