@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina web basica - Angel E. Castillo Reyes</title>
+  <link rel="stylesheet" href="styles.css">
+  <!--
+    Ventajas de HTML5 (comparacion con HTML anterior):
+    1. Etiquetas semanticas (header, nav, main, article, section, footer)
+       que explican el significado de cada parte, no solo el diseno.
+    2. Multimedia nativa con video y audio, sin plugins como Flash.
+    3. canvas para dibujar graficos en el navegador.
+    4. figure y figcaption para describir imagenes.
+    5. Mejor accesibilidad y SEO porque los buscadores entienden la estructura.
+  -->
+</head>
+<body>
+  <!-- Cabecera de la pagina: identidad y navegacion -->
+  <header>
+    <h1>Angel E. Castillo Reyes</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#semantica">Semantica</a>
+      <a href="#html5">HTML5</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Seccion de presentacion con encabezado, parrafo, lista y enlace -->
+    <section id="inicio">
+      <h2>Estructura basica de HTML</h2>
+      <p>
+        Esta pagina usa la sintaxis de HTML5: etiquetas de apertura y cierre,
+        atributos y valores. El documento tiene html, head y body.
+      </p>
+      <ul>
+        <li>Encabezados con h1 y h2</li>
+        <li>Parrafos con p</li>
+        <li>Listas con ul y li</li>
+        <li>Enlaces con a</li>
+      </ul>
+      <p>
+        Recurso de consulta:
+        <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener">MDN HTML</a>
+      </p>
+      <figure>
+        <img class="banner" src="imagenes/banner.svg" alt="Banner de la pagina HTML5">
+        <figcaption>Figura 1. Banner de presentacion de la pagina.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Semantica: cada etiqueta describe su funcion -->
+    <section id="semantica">
+      <h2>Semantica de HTML</h2>
+      <article>
+        <h3>Que significa cada etiqueta</h3>
+        <p>header: cabecera. nav: menu. main: contenido principal.</p>
+        <p>article: contenido independiente. section: bloque tematico. footer: pie.</p>
+      </article>
+      <figure>
+        <img src="imagenes/foto.svg" width="160" alt="Ilustracion de perfil">
+        <figcaption>Figura 2. Imagen decorativa del autor.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Caracteristicas nuevas de HTML5 -->
+    <section id="html5">
+      <h2>Caracteristicas HTML5</h2>
+      <p>Video, audio y canvas funcionan en el navegador sin programas extra.</p>
+
+      <!-- video de ejemplo (archivo corto publico o poster). Usamos un video de muestra -->
+      <video controls width="480" poster="imagenes/banner.svg">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+        Tu navegador no reproduce video.
+      </video>
+
+      <audio controls>
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg">
+        Tu navegador no reproduce audio.
+      </audio>
+
+      <p>Canvas: dibujo simple con JavaScript.</p>
+      <canvas id="miCanvas" width="280" height="120"></canvas>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Estudiante de Northbridge University. Laboratorio de pagina web basica.</p>
+      <!-- Pega aqui el enlace de GitHub cuando lo publiques -->
+      <p>Repositorio:
+        <a href="https://github.com/TU-USUARIO/pagina-web-basica" target="_blank">GitHub del proyecto</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Angel E. Castillo Reyes - 2026 - Pagina creada con HTML5 y CSS</p>
+  </footer>
+
+  <script>
+    var c = document.getElementById("miCanvas");
+    var ctx = c.getContext("2d");
+    ctx.fillStyle = "#1F4E79";
+    ctx.fillRect(20, 30, 80, 60);
+    ctx.fillStyle = "#F4C430";
+    ctx.beginPath();
+    ctx.arc(180, 60, 35, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.fillStyle = "#222";
+    ctx.font = "14px Arial";
+    ctx.fillText("HTML5 canvas", 85, 110);
+  </script>
+</body>
+</html>
